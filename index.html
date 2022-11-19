@@ -27,9 +27,29 @@
                                     <div class="col12">
                                         <form onsubmit="event.preventDefault();" class="callForm" action="" post="/create_new_post">
                                             <legend>Перетелефонуйте мені</legend>
-                                            <input placeholder="Ім'я" type="text">
-                                            <input placeholder="Номер телефону" type="text" required>
+                                            <label for="name">Введіть ваше ім'я:</label>
+                                            <input id="name" placeholder="Ім'я" type="text">
+                                            <input placeholder="Номер телефону" type="text" required  disabled>
+                                           
+                                            <input type="file">
+                                            <textarea placeholder="Введіть опис:" rows="5"></textarea>
+                                            <select name="" id="">
+                                                <option selected defoult disabled value="">Оберіть область</option>
+                                                <optgroup label="choose val.">
+                                                   <option value="test">test</option>
+                                                    <option value="test">test1</option>
+                                                    <option value="test">test2</option></optgroup>
+                                                <option value="test">test</option>
+                                                <option value="test">test1</option>
+                                                <option value="test">test2</option>
+                                                <option value="test">test3</option>
+                                                <option value="test">test4</option>
+                                                <option value="test">test5</option>
+                                            </select>
+                                            <input type="checkbox">
+                                            <input type="radio" value="test">
                                             <button class="btn btn-warning mb-3" type="submit">Замовити</button>
+                                           
                                         </form>
                                     </div>
                                 </div>

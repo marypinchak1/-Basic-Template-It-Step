@@ -20,6 +20,24 @@ margin: 12px;
     border: none;
     background-color:rgb(230, 230, 17);
 }
-.callForm input::placeholder{
+.callForm input::placeholder,
+.callForm textarea::placeholder{
     color: rgb(255, 255, 255);
+}
+.callForm input:disabled{
+    background-color: rgb(126, 126, 126);
+}
+.callForm label{
+    cursor: pointer;
+}
+.callForm textarea{
+    min-width: 100%;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    padding: 12px;
+    background-color:rgb(230, 230, 17);
+
+}
+.callForm select{
+    margin-bottom: 12px;
 }
