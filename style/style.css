@@ -1,0 +1,25 @@
+.modal-win{
+    background-color: rgb(160, 187, 236);
+}
+.callForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.callForm legend{
+text-align: center;
+text-transform: uppercase;
+color: white;
+margin: 12px;
+}
+.callForm input{
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    border: none;
+    background-color:rgb(230, 230, 17);
+}
+.callForm input::placeholder{
+    color: rgb(255, 255, 255);
+}
