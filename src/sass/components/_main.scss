@@ -1,0 +1,34 @@
+.nav__tabs {
+  .item {
+    height: 40px;
+    width: 90px;
+    border: 2px solid #000;
+    margin: 12px;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    transition: 0.8s;
+    &.active {
+      background-color: blue;
+      color: antiquewhite;
+      transition: 0.8s;
+    }
+  }
+}
+.content__tabs {
+  .content {
+    border: 2px solid #000;
+    margin: 12px;
+    height: 600px;
+    width: 100%;
+  }
+  :first-child {
+    background-color: red;
+  }
+  :last-child {
+    background-color: rgb(8, 0, 255);
+  }
+  :nth-child(2) {
+    background-color: chartreuse;
+  }
+}

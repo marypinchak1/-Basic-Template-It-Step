@@ -1,26 +1,39 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>TEMPLATE</title>
 
-    <link rel="stylesheet" href="css/style.min.css">
-</head>
+    <link rel="stylesheet" href="css/style.min.css" />
+  </head>
 
-<body>
-    @@include("components/_header.html")
+  <body>
+    <div class="template">
+      <div class="nav__tabs d-flex">
+        <div id="tab-1" class="item active" data-tabs="1">1</div>
+        <div id="tab-2" class="item" data-tabs="2">2</div>
+        <div id="tab-3" class="item" data-tabs="3">3</div>
+      </div>
+      <div class="content__tabs">
+        <div class="content" data-tabs="1">content 1</div>
+        <div class="content" data-tabs="2">content 2</div>
+        <div class="content" data-tabs="3">content 3</div>
+      </div>
+    </div>
 
-    @@include("pages/page-template.html")
+    @@include("components/_header.html") @@include("pages/page-template.html")
+    @@include("components/_footer.html") @@include("icons/_icons.html")
 
-    @@include("components/_footer.html")
-    @@include("icons/_icons.html")
-    
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js"
-        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-2.2.4.min.js"
+      integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
     <script src="js/script.js"></script>
-</body>
-
+  </body>
 </html>
