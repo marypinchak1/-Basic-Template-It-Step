@@ -1,0 +1,52 @@
+.home {
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vw;
+}
+
+.tg {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100px;
+  height: auto;
+  margin: 20px;
+}
+.tg td {
+  border-color: black;
+  border-style: solid;
+  border-width: 1px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  overflow: hidden;
+  padding: 10px 5px;
+  word-break: normal;
+}
+.tg th {
+  border-color: black;
+  border-style: solid;
+  border-width: 1px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  overflow: hidden;
+  padding: 10px 5px;
+  word-break: normal;
+}
+.tg .tg-0lax {
+  text-align: left;
+  vertical-align: top;
+}
+.red-border {
+  border: 1px solid red !important;
+  display: table-cell;
+  vertical-align: middle !important;
+  text-align: center !important;
+}
+.border-buttom {
+  border-bottom: 1px solid red !important;
+}
+.border-right {
+  border-right: 1px solid red !important;
+}
