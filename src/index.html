@@ -1,26 +1,91 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>TEMPLATE</title>
 
-    <link rel="stylesheet" href="css/style.min.css">
-</head>
+    <link rel="stylesheet" href="css/style.min.css" />
+  </head>
 
-<body>
+  <body>
     @@include("components/_header.html")
 
-    @@include("pages/page-template.html")
+    <main class="home">
+      <div class="home__content m-5">
+        <div id="one" class="element two">one</div>
+        <div id="two" class="element">two</div>
+        <div class="element">three</div>
+        <div class="element">four</div>
+        <div class="element">one</div>
+        <div class="element">two</div>
+        <div class="element">three</div>
+        <div class="element">four</div>
+        <div class="element">one</div>
+        <div class="element">two</div>
+        <div class="element">three</div>
+        <div class="element">four</div>
+        <div class="element">one</div>
+        <div class="element">two</div>
+        <div class="element">three</div>
+        <div class="element">four</div>
+        <div class="element">one</div>
+        <div class="element">two</div>
+        <div class="element">three</div>
+        <div class="element">four</div>
+        <div class="element">one</div>
+        <div class="element">two</div>
+        <div class="element">three</div>
+        <div class="element">four</div>
+      </div>
+      <div class="slider">
+        <div>
+          <div class="slider__item">
+            <div class="slider__item_grid">
+              <div class="elements"></div>
+              <div class="elements"></div>
+              <div class="elements"></div>
+              <div class="elements"></div>
+              <div class="elements"></div>
+              <div class="elements"></div>
+              <div class="elements"></div>
+              <div class="elements"></div>
+              <div class="elements"></div>
+              <div class="elements"></div>
+              <div class="elements"></div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="slider__item">
+            <div class="slider__item_grid-second">
+              <div class="elements"></div>
+              <div class="elements"></div>
+              <div class="elements"></div>
+              <div class="elements"></div>
+              <div class="elements"></div>
+              <div class="elements"></div>
+              <div class="elements"></div>
+              <div class="elements"></div>
+              <div class="elements"></div>
+              <div class="elements"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
 
-    @@include("components/_footer.html")
-    @@include("icons/_icons.html")
-    
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js"
-        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    @@include("components/_footer.html") @@include("icons/_icons.html")
+
+    <script
+      src="https://code.jquery.com/jquery-2.2.4.min.js"
+      integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
     <script src="js/script.js"></script>
-</body>
-
+  </body>
 </html>
