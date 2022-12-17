@@ -10,3 +10,13 @@
 @import "components/header";
 @import "components/footer";
 
+video{
+    border-radius: 24px;
+}
+iframe{
+    border-radius: 24px;
+}
+
+.ytp-large-play-button-red-bg .ytp-large-play-button-bg{
+    fill:aqua !important;
+}
