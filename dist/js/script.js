@@ -1,4 +1,104 @@
-console.log("Hello, World!");
+const secretNumber = 5;
+let status = true;
+let counter = 0;
+
+while (status) {
+  counter++;
+  const yourNumber = Number(prompt("Please, enter a secret number: "));
+  if (yourNumber < secretNumber) {
+    alert("Your number is lower!");
+  } else if (yourNumber > secretNumber) {
+    alert("Your number is higher!");
+  } else {
+    alert("Success!");
+    status = false;
+  }
+}
+
+alert(`Tries: ${counter}`)
+// while (yourNumber == secretNumber)
+
+/* const a = prompt("Введіть число")
+
+if (a > 1 && a < 5) {
+  console.log("Success!");
+} else {s
+  console.log("Fail!");
+}
+ */
+
+/* let personalData = {
+  name: "John",
+  surname: "Doe",
+  middleName: "Patrick",
+  address: {
+    city: "Drohobych",
+    street: "Ranevytska",
+    number: 123,
+    name: "some",
+    metrics: {
+      water: 225452,
+      gas: 5565332,
+    },
+  },
+  age: [12, 23, 45],
+};
+personalData.age.pop();
+
+console.log(
+  personalData.address.street,
+  personalData.address.number,
+  personalData.address.metrics.gas
+);
+console.log(personalData.age.length);
+console.log(personalData.age[1]);
+console.log(personalData.age);
+
+let metrics = personalData.address.metrics;
+
+console.log(metrics.water);
+
+const age = Number(prompt("Введіть ваш вік: "));
+console.log(age);
+const isActive = true;
+console.log(typeof age);
+if (!isActive) {
+  if (age >= 0) {
+    if (age < 18) {
+      console.log("ВИ НЕПОВНОЛІТНІ!");
+    } else if (age >= 18 && age <= 21) {
+      console.log("ВИ ПОВНОЛІТНІ В УКРАЇНІ!");
+    } else if (age > 21) {
+      console.log("ВИ ПОВНОЛІТНІ!");
+    }
+  } else {
+    alert("Ви ввели не вірні дані!");
+  }
+} else {
+  alert("Форма не працює!");
+}
+
+console.log(personalData);
+
+let someArr = [];
+
+if (someArr) {
+  if (age >= 0) {
+    if (age < 18) {
+      console.log("ВИ НЕПОВНОЛІТНІ!");
+    } else if (age >= 18 && age <= 21) {
+      console.log("ВИ ПОВНОЛІТНІ В УКРАЇНІ!");
+    } else if (age > 21) {
+      console.log("ВИ ПОВНОЛІТНІ!");
+    }
+  } else {
+    alert("Ви ввели не вірні дані!");
+  }
+} else {
+  alert("Форма не працює!");
+} */
+
+/* console.log("Hello, World!");
 
 let name = "John";
 let surname = "Doe";
@@ -44,5 +144,4 @@ if (position >= 0) {
 } else {
   console.log(`Число ${13} є в масиві!`);
 }
-
-
+ */
