@@ -1,4 +1,202 @@
-const secretNumber = 5;
+let familyList = [
+  {
+    name: "John Doe",
+    age: 25,
+  },
+  {
+    name: "Jane Doe",
+    age: 24,
+  },
+  {
+    name: "Jack Doe",
+    age: 18,
+  },
+
+  {
+    name: "Janifer Doe",
+    age: 14,
+  },
+  {
+    name: "Sem Doe",
+    age: 24,
+  },
+];
+
+let counter = 0;
+familyList.forEach(function (item) {
+  if (familyList[counter].age >= 21) {
+    console.log(familyList[counter].name, familyList[counter].age);
+  }
+  counter++;
+});
+
+/* const fruits = [
+  "apple",
+  "banana",
+  "orange",
+  "pear",
+  "grape",
+  "pineapple",
+  "strawberry",
+  "watermelon",
+  "kiwi",
+  "mango",
+  "peach",
+  "lemon",
+  "lime",
+  "blueberry",
+  "raspberry",
+  "blackberry",
+  "apricot",
+  "cherry",
+  "coconut",
+  "fig",
+  "pomegranate",
+  "plum",
+  "nectarine",
+  "persimmon",
+  "tangerine",
+  "papaya",
+  "guava",
+  "jackfruit",
+  "lychee",
+  "starfruit",
+  "cantaloupe",
+  "honeydew",
+  "mangosteen",
+  "pawpaw",
+  "durian",
+  "tamarind",
+  "mulberry",
+  "currant",
+  "gooseberry",
+  "rambutan",
+  "longan",
+  "dragonfruit",
+  "clementine",
+  "satsuma",
+  "mandarin",
+  "tangelo",
+  "yuzu",
+  "nectarine",
+  "persimmon",
+  "tangerine",
+  "papaya",
+  "guava",
+  "jackfruit",
+  "lychee",
+  "starfruit",
+  "cantaloupe",
+  "honeydew",
+  "mangosteen",
+  "pawpaw",
+  "durian",
+  "tamarind",
+  "mulberry",
+  "currant",
+  "gooseberry",
+  "rambutan",
+  "longan",
+  "dragonfruit",
+  "clementine",
+  "satsuma",
+  "mandarin",
+  "tangelo",
+  "yuzu",
+  "nectarine",
+  "persimmon",
+  "tangerine",
+  "papaya",
+  "guava",
+  "jackfruit",
+  "lychee",
+  "starfruit",
+  "cantaloupe",
+  "honeydew",
+  "mangosteen",
+  "pawpaw",
+  "durian",
+  "tamarind",
+  "mulberry",
+  "currant",
+  "gooseberry",
+  "rambutan",
+];
+let counter = 0;
+fruits.forEach(function (item) {
+  if (item[0] == "a") {
+    console.log(item);
+    counter++;
+  }
+});
+console.log(counter); */
+/* const indexOfFruit = fruits.indexOf("kiwi");
+if (indexOfFruit >= 0) {
+  console.log(`I like ${fruits[indexOfFruit].toUpperCase()}!`);
+}else{
+  console.log("There is no such fruit!");
+}
+
+
+const someVar = "aPPle";
+const someVarLovercase = someVar.toLowerCase();
+const someVarUppercase = someVar[0].toUpperCase();
+console.log(`I like ${someVarUppercase+someVarLovercase.slice(1)} !`);
+ */
+
+// Task_1
+
+/* const yourName = prompt(`Введіть Ваше ім'я:`)
+alert(`Привіт, ${yourName}!`) */
+
+// Task_2
+
+/* const birthYear = Number(prompt(`Введіть Ваш piк народження:`))
+const thisYear = 2023
+let yourAge = thisYear - birthYear
+if(birthYear>0){
+alert(`Вам ${yourAge} років!`)
+}else {
+  alert("Ви ввели не вірні дані!");
+} */
+
+// Task_3
+
+/* const squareHeigth = Number(prompt(`Введіть довжину сторони квадрата (см):`));
+let squarePerimeter = squareHeigth * 4;
+if (squareHeigth > 0) {
+  alert(`Периметр квадрата ${squarePerimeter} см.`);
+} else {
+  alert("Ви ввели не вірні дані!");
+}; */
+
+// Task_4
+
+/* const circleRadius = Number(prompt(`Введіть радіус кола (см):`));
+let circleArea = Math.PI * Math.pow(circleRadius, 2);
+if (circleRadius > 0) {
+  alert(`Площа кола ${circleArea.toFixed(2)} см.`);
+} else {
+  alert("Ви ввели не вірні дані!");
+} */
+
+// Task_5
+
+// Task_6
+
+// Task_7
+
+// Task_8
+
+// Task_9
+
+// Task_10
+
+// Task_11
+
+// Task_12
+
+/* const secretNuмber = 5;
 let status = true;
 let counter = 0;
 
@@ -15,7 +213,8 @@ while (status) {
   }
 }
 
-alert(`Tries: ${counter}`)
+alert(`Tries: ${counter}`) */
+
 // while (yourNumber == secretNumber)
 
 /* const a = prompt("Введіть число")
