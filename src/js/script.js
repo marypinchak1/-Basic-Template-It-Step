@@ -1,4 +1,87 @@
-let familyList = [
+// 1. Persinal data of users
+const USER_DATA = [
+  {
+    name: "John",
+    age: 25,
+    surname: "Doe",
+    fatherName: "Smith",
+  },
+  {
+    name: "Jane",
+    age: 30,
+    surname: "Doe",
+    fatherName: "Sarah",
+  },
+  {
+    name: "Jack",
+    age: 28,
+    surname: "Doe",
+    fatherName: "John",
+  },
+  {
+    name: "Jill",
+    age: 32,
+    surname: "Doe",
+    fatherName: "Monica",
+  },
+  {
+    name: "Jill",
+    age: 17,
+    surname: "Doe",
+    fatherName: "Monica",
+  },
+];
+
+function checkUserAge(age) {}
+
+USER_DATA.forEach((user) => {
+  const userAge = checkUserAge(user.age);
+  if (user.age >= 18) {
+    console.log("true");
+  } else {
+    console.log("false");
+  }
+});
+
+
+
+
+/* 
+let counter = 0;
+
+// Create
+
+function getInitialsUser(surname, name, fatherName) {
+  counter++;
+  if (counter <= 3) {
+    const initials = surname + " " + name[0] + "." + fatherName[0] + ".";
+    return initials;
+  }
+  return "Function is called more than 3 times";
+}
+
+function displayAlertInputText(text) {
+  alert(text);
+}
+
+const sayHello = (someText) => {
+  console.log(someText);
+}
+
+usersData.forEach((user) => {
+  const userInitials = getInitialsUser(
+    user.surname,
+    user.name,
+    user.fatherName
+  );
+  console.log(userInitials + " " + user.age);
+});
+
+//Input data to display in alert
+const inputText = prompt("Enter text to display in alert");
+displayAlertInputText(inputText); */
+
+/* let familyList = [
   {
     name: "John Doe",
     age: 25,
@@ -28,7 +111,7 @@ familyList.forEach(function (item) {
     console.log(familyList[counter].name, familyList[counter].age);
   }
   counter++;
-});
+}); */
 
 /* const fruits = [
   "apple",
@@ -344,3 +427,22 @@ if (position >= 0) {
   console.log(`Число ${13} є в масиві!`);
 }
  */
+
+let refill, drink, code;
+
+
+
+
+if(coffee.empty) {
+  coffee.refill();
+} else{
+  coffee.drink();
+  code()
+}
+
+
+
+
+
+
+
