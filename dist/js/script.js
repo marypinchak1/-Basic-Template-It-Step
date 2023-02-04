@@ -1,4 +1,143 @@
-let response = {
+/*
+{
+  id: 1,
+  title: 'JavaScript',
+  description: 'Some description',
+  createdAt: '2019-01-01',
+  isDone: false,
+  isDeleted: false,
+  priority: 1,
+}
+*/
+
+const TASKS = [];
+let DIPLAY_TASKS = [];
+
+const PRIORITY = [
+  { id: 1, name: "Low" },
+  { id: 2, name: "Normal" },
+  { id: 3, name: "High" },
+  { id: 4, name: "Urgent" },
+];
+
+// display elemets from TASKS inner HTML
+function setElementOnDOM() {
+  const root = document.getElementById("tasks");
+  root.innerHTML = "";
+  DIPLAY_TASKS.forEach((task) => {
+    if (!task.isDeleted) {
+      const div = document.createElement("div");
+      div.classList.add("task");
+      // add id to div
+      div.setAttribute("data-id", task.id);
+      div.innerHTML = `
+      <div class="task__title">
+        <h3>${task.title}</h3>
+        <p>${task.priority.name}</p>
+      </div>
+      <div class="task__description">
+        <p>${task.description}</p>
+      </div>
+      <div class="task__footer">
+        <p>${task.createdAt}</p>
+        <button class="task__button">Delete</button>
+      </div>
+    `;
+      root.appendChild(div);
+    }
+  });
+}
+
+function setPriorityOptions(id) {
+  // insert into the DOM by id
+  const root = document.getElementById(`${id}`);
+  PRIORITY.forEach((priority) => {
+    const option = document.createElement("option");
+    option.value = priority.id;
+    option.textContent = priority.name;
+    root.appendChild(option);
+  });
+}
+
+setPriorityOptions("priority");
+setPriorityOptions("filter_priority");
+
+document.getElementById("submit_form").addEventListener("click", (e) => {
+  e.preventDefault();
+  // get data from input by id
+  const title = document.getElementById("title_form").value;
+  const description = document.getElementById("description_form").value;
+  const priorityId = document.getElementById("priority").value;
+  // const priority = PRIORITY.filter((priority) => priority.id === +priorityId)[0]
+  const priority = PRIORITY.find((priority) => priority.id === +priorityId);
+  // create template for task
+  const task = {
+    id: TASKS.length + 1,
+    title: title,
+    description: description,
+    createdAt: new Date(),
+    isDone: false,
+    isDeleted: false,
+    priority: priority,
+  };
+  // push task to TASKS
+  TASKS.push(task);
+  //clear input
+  document.getElementById("title_form").value = "";
+  document.getElementById("description_form").value = "";
+  document.getElementById("priority").value = 1;
+  // display elemets from TASKS
+  DIPLAY_TASKS = TASKS;
+  setElementOnDOM();
+});
+
+// add event listener to delete button by class
+document.addEventListener("click", (e) => {
+  if (e.target.classList.contains("task__button")) {
+    const id = e.target.parentElement.parentElement.getAttribute("data-id");
+    const task = TASKS.find((task) => task.id === +id);
+    task.isDeleted = true;
+    // replace task in TASKS
+    TASKS.splice(TASKS.indexOf(task), 1, task);
+    DIPLAY_TASKS = TASKS;
+    setElementOnDOM();
+  }
+});
+
+document.getElementById("filter").addEventListener("change", (e) => {
+  if (e.target.value == 0) {
+    DIPLAY_TASKS = TASKS;
+    if (DIPLAY_TASKS.length == 0) {
+      document.getElementById("tasks").innerHTML = "No tasks";
+    } else {
+      setElementOnDOM();
+    }
+  } else if (e.target.value >= 1) {
+    const changedPriorityId = e.target.value;
+    DIPLAY_TASKS = TASKS.filter(
+      (task) => task.priority.id === +changedPriorityId
+    );
+    if (DIPLAY_TASKS.length == 0) {
+      document.getElementById("tasks").innerHTML = "No tasks";
+    } else {
+      setElementOnDOM();
+    }
+  }
+});
+document.getElementById("sortABC").addEventListener("click", (e) => {
+DIPLAY_TASKS = TASKS.sort((a, b) => {
+  return b.createdAt - a.createdAt;
+});
+setElementOnDOM();
+});
+document.getElementById("sortCBA").addEventListener("click", (e) => {
+  DIPLAY_TASKS = TASKS.sort((a, b) => {
+    return a.createdAt - b.createdAt;
+  });
+  setElementOnDOM();
+  });
+
+/* let response = {
   data: [
     {
       id: 119,
@@ -2121,7 +2260,7 @@ console.log(posts);
 
 let sortedPosts = postsFiltered.sort((a,b) => {
 
-})
+}) */
 
 /* let mas=[10, 5, 8, 9, 1, 3, 2];
 
