@@ -31,16 +31,26 @@ function setElementOnDOM() {
       // add id to div
       div.setAttribute("data-id", task.id);
       div.innerHTML = `
-      <div class="task__title">
+      <div class="task__title d-flex align-items-center text-center gap-5">
         <h3>${task.title}</h3>
-        <p>${task.priority.name}</p>
+        <p style="line-height: 1.5">${task.priority.name} priority</p>
       </div>
       <div class="task__description">
-        <p>${task.description}</p>
+        <p class="my-3">${task.description}</p>
       </div>
-      <div class="task__footer">
-        <p>${task.createdAt}</p>
+      
+      <div>
+      <p class="my-3">${task.createdAt}</p>
+      </div>
+      <div style="display: flex; gap: 12px">
+      <div class="task__footer">       
+      <p>${task.isDeleted}</p> 
         <button class="task__button">Delete</button>
+      </div>
+      <div class="task__done">
+        <p>${task.isDone}</p>
+        <button class="task__done_button">Done</button>
+      </div>
       </div>
     `;
       root.appendChild(div);
@@ -94,11 +104,32 @@ document.getElementById("submit_form").addEventListener("click", (e) => {
 // add event listener to delete button by class
 document.addEventListener("click", (e) => {
   if (e.target.classList.contains("task__button")) {
-    const id = e.target.parentElement.parentElement.getAttribute("data-id");
+    const id =
+      e.target.parentElement.parentElement.parentElement.getAttribute(
+        "data-id"
+      );
     const task = TASKS.find((task) => task.id === +id);
     task.isDeleted = true;
     // replace task in TASKS
     TASKS.splice(TASKS.indexOf(task), 1, task);
+    DIPLAY_TASKS = TASKS;
+    setElementOnDOM();
+  }
+});
+document.addEventListener("click", (e) => {
+  if (e.target.classList.contains("task__done_button")) {
+    const id =
+      e.target.parentElement.parentElement.parentElement.getAttribute(
+        "data-id"
+      );
+    const task = TASKS.find((task) => task.id === +id);
+    task.isDone = true;
+    // cross out the line
+    e.target.parentElement.parentElement.parentElement.style.textDecoration =
+      "line-through";
+    // replace task in TASKS
+    TASKS.splice(TASKS.indexOf(task), 1, task);
+    TASKS.push(task);
     DIPLAY_TASKS = TASKS;
     setElementOnDOM();
   }
@@ -125,17 +156,17 @@ document.getElementById("filter").addEventListener("change", (e) => {
   }
 });
 document.getElementById("sortABC").addEventListener("click", (e) => {
-DIPLAY_TASKS = TASKS.sort((a, b) => {
-  return b.createdAt - a.createdAt;
+  DIPLAY_TASKS = TASKS.sort((a, b) => {
+    return b.createdAt - a.createdAt;
+  });
+  setElementOnDOM();
 });
-setElementOnDOM();
-});
-document.getElementById("sortCBA").addEventListener("click", (e) => {
+document.getElementById("sortDESC").addEventListener("click", (e) => {
   DIPLAY_TASKS = TASKS.sort((a, b) => {
     return a.createdAt - b.createdAt;
   });
   setElementOnDOM();
-  });
+});
 
 /* let response = {
   data: [
